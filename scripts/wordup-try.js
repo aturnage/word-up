@@ -54,7 +54,7 @@ function addNewWordSubmission(word) {
     // TODO 21
     // replace the hardcoded 'false' with the real answer
     var alreadyUsed;
-    var foundWOrd = model.wordSubmissions.find(function(element){
+    var foundWord = model.wordSubmissions.find(function(element){
         return element.word === word;
     });
     if (foundWord) {
@@ -135,7 +135,7 @@ function render() {
     // TODO 2
     // Update the curent time remaining on the scoreboard.
     $("#time-remaining").text(model.secondsRemaining);
-
+    console.log(model.secondsRemaining);
     // if the game has not started yet, just hide the #game container and exit
     if (model.gameHasStarted == false) {
         $("#game").hide();
@@ -158,7 +158,7 @@ function render() {
     $("#game").show();
 
     // render the letter tiles
-    var letterChips = model.allowedLetters.map(letterChip)
+    var letterChips = model.allowedLetters.map(letterChip);
     $("#allowed-letters").append(letterChips);
 
     // TODO 11
@@ -222,15 +222,15 @@ function wordSubmissionChip(wordSubmission) {
     var wordChip = $("<span></span>")
         .text(wordSubmission.word)
         .attr("class", "tag tag-lg word-submission");
-        var = scoreChip =$('<span></span>');
+        var scoreChip = $('<span></span>');
 
     // if we know the status of this word (real word or not), then add a green score or red X
     if (wordSubmission.hasOwnProperty("isRealWord")) {
         scoreChip.text(wordScore(wordSubmission.word))
         .attr("class", "tag tag-default tag-xs correct-word-chip");
     }else{
-        scoreChip.text("X");
-        .attr("class", "tag tag-default tag-xs incorrect-word-chip";)
+        scoreChip.text("X")
+        .attr("class", "tag tag-default tag-xs incorrect-word-chip");
     }
         // TODO 17
         // give the scoreChip appropriate text content
@@ -271,7 +271,7 @@ $(document).ready(function() {
     // When the textbox content changes,
     // update the .currentAttempt property of the model and re-render
     $('#textbox').on('input', function(){
-        modle.currentAttempt = $(this).val();
+        model.currentAttempt = $(this).val();
         render();
     });
 
