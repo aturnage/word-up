@@ -44,7 +44,7 @@
             <!-- TODO 1
             Make a "New Game" button
             -->
-            <button id="new-game-button" class="btn btn-primary">New Game</button>
+            <button id="new-game-button" class="btn btn-default btn-lg" style="color: white; background-color:#2554C7;" type="submit">New Game</button>
         </section>
 
         <!-- things that should not show up until the (first) game has started -->
@@ -53,11 +53,13 @@
             <!-- TODO 4
             Add some instructions so the user knows what to do.
             -->
-            <div>Spell as many words as you can by using the letters shown (BELOW)!</div>
+            <p id="instructions"> Put together as many words as you can (using the letters below) to rack up points.</p>
+
             <!-- TODO 5
             Make an empty container to hold the letter chips.
+            Give it an id of "allowed-letters".
             -->
-            <div id = "allowed-letters"></div>
+                <div id="allowed-letters" class="container-fluid"></div>
             <!-- the form via which the user attempts to submit new words -->
             <form id="word-attempt-form">
                 <!-- the actual text box where the user types -->
@@ -75,5 +77,5 @@
     </main>
 
     <!-- our script -->
-    <script src="scripts/wordup-try.js"></script>
+    <script src="scripts/wordup.js"></script>
 </body>

@@ -2,12 +2,17 @@ body {
     text-align: center;
     color: gray;
     font-size: 20px;
+
 }
 
+h6,h1 {
+
+    color: grey;
+}
 .jumbotron {
-    padding: 2%;
-    background: orange;
-    color: #fff;
+    padding: 6%;
+    background: #FFA500;
+    color: white;
 }
 
 main {
@@ -65,4 +70,16 @@ input {
 input:focus {
     border: 2px solid #4285F4; /* Bootstrap "primary" blue */
     outline-color: #4285f4; /* outline is the fuzzy "glow" */
+}
+
+.scoreChipCorrect {
+    font-size: 14px;
+    margin-left: 0.4em;
+    background-color: blue;
+}
+
+.scoreChipX{
+    font-size: 14px;
+    margin-left: 0.4em;
+    background-color: red;
 }
